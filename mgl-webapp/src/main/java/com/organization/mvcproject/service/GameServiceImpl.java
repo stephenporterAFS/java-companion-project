@@ -1,16 +1,14 @@
-package com.organization.mvcproject.MGL_Task1.service;
+package com.organization.mvcproject.service;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.organization.mvcproject.MGL_Task1.model.Game;
+import com.organization.mvcproject.model.Game;
 
-//TODO 1.0  follow java class naming, improve class name
-//TODO 1.0  "javaGameService" service reference name is not necessary, remove it.
-@Service("javaGameService")
-public class Game_Service_Impl implements Game_Service {
+@Service
+public class GameServiceImpl implements GameService {
 
 	/**
 	 * TODO 2.0 The class that interacts with persistent data is called a Data Access Object(DAO)
@@ -30,19 +28,19 @@ public class Game_Service_Impl implements Game_Service {
 	private static List<Game> populateGames() {
 
 		Game game1 = new Game();
-		game1.setGame_id(++gameId);
-		game1.setGame_genre("Sport");
-		game1.setGame_name("Rocket League");
+		game1.setId(++gameId);
+		game1.setGenre("Sport");
+		game1.setName("Rocket League");
 
 		Game game2 = new Game();
-		game2.setGame_id(++gameId);
-		game2.setGame_genre("Shooter");
-		game2.setGame_name("Halo 3");
+		game2.setId(++gameId);
+		game2.setGenre("Shooter");
+		game2.setName("Halo 3");
 
 		Game game3 = new Game();
-		game3.setGame_id(++gameId);
-		game3.setGame_genre("MMORPG");
-		game3.setGame_name("Runescape");
+		game3.setId(++gameId);
+		game3.setGenre("MMORPG");
+		game3.setName("Runescape");
 
 		games.add(game1);
 		games.add(game2);
@@ -58,7 +56,7 @@ public class Game_Service_Impl implements Game_Service {
 
 	@Override
 	public Game saveGame(Game game) {
-		game.setGame_id(++gameId);
+		game.setId(++gameId);
 		games.add(game);
 		return game;
 	}
@@ -74,7 +72,7 @@ public class Game_Service_Impl implements Game_Service {
 	}
 
 	public static void setGameId(Long gameId) {
-		Game_Service_Impl.gameId = gameId;
+		GameServiceImpl.gameId = gameId;
 	}
 
 	public static Long getCompanyId() {
@@ -82,7 +80,7 @@ public class Game_Service_Impl implements Game_Service {
 	}
 
 	public static void setCompanyId(Long companyId) {
-		Game_Service_Impl.companyId = companyId;
+		GameServiceImpl.companyId = companyId;
 	}
 
 	public static List<Game> getGames() {
@@ -90,7 +88,7 @@ public class Game_Service_Impl implements Game_Service {
 	}
 
 	public static void setGames(ArrayList<Game> games) {
-		Game_Service_Impl.games = games;
+		GameServiceImpl.games = games;
 	}
 
 }
