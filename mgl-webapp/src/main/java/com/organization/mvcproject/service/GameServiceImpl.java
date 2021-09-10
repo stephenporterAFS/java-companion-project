@@ -61,34 +61,4 @@ public class GameServiceImpl implements GameService {
 		return game;
 	}
 
-	/**
-	 * TODO 1.0 the static methods below are either not related to a Game Service,
-     * are confused with methods found in the model, or duplicates. 
-     * Remove them.
-	 * 
-	 */
-	public static Long getGameId() {
-		return gameId;
-	}
-
-	public static void setGameId(Long gameId) {
-		GameServiceImpl.gameId = gameId;
-	}
-
-	public static Long getCompanyId() {
-		return companyId;
-	}
-
-	public static void setCompanyId(Long companyId) {
-		GameServiceImpl.companyId = companyId;
-	}
-
-	public static List<Game> getGames() {
-		return games;
-	}
-
-	public static void setGames(ArrayList<Game> games) {
-		GameServiceImpl.games = games;
-	}
-
 }
