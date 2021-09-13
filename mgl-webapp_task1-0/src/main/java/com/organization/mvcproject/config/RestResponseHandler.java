@@ -10,7 +10,6 @@ public class RestResponseHandler implements ResponseErrorHandler{
 	@Override
 	public boolean hasError(ClientHttpResponse response) throws IOException {
 		System.out.println("RestResponseHandler (hasError): " + response.getStatusCode());
-		// TODO Auto-generated method stub
 		return false;
 	}
 

@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.organization.mvcproject.model.Game;
+import com.organization.mvcproject.model.GameImpl;
 
 @Controller
 public class HomeController {
@@ -20,7 +20,7 @@ public class HomeController {
 	// I moved this from GameController.java
 	@RequestMapping(value = "/games", method = RequestMethod.GET)
 	public ModelAndView game() {
-		return new ModelAndView("games", "command", new Game());
+		return new ModelAndView("games", "command", new GameImpl());
 	}
 	   // This was here already; checked
 	@RequestMapping(value="/hello")
