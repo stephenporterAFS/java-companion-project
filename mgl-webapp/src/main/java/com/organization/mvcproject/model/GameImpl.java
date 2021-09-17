@@ -10,6 +10,7 @@ public class GameImpl implements Game {
 	private Long id;
 	private String name;
 	private String genre;
+	
 	@Override
 	public Long getId() {
 		return id;

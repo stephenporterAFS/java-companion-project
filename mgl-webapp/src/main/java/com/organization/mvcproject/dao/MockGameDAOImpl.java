@@ -59,7 +59,7 @@ public class MockGameDAOImpl implements MockGameDAO {
 			if (foundGame != null) {
 				for (int i = 0; i < games.size(); i++) {
 					if (game.getId().equals(games.get(i).getId())) {
-						return games.set(i, foundGame);
+						return games.set(i, game);
 					}
 				}
 			}
